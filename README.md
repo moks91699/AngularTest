@@ -1,4 +1,4 @@
 ﻿# AngularTest
 For testing, use
-username:input
-password:input
+username : input
+password : input
