@@ -33,13 +33,11 @@ export class LoginComponent implements OnInit {
           this.isLoggedIn = true;
           alert('Login Successful')
           this.router.navigate(['/home'])
-          console.log(res);
         }
         
         },
         (err) => {
           this.isLoggedIn = false;
-          console.log(err);
         }
       
     
