@@ -2,15 +2,15 @@
     <mat-card class="loginArea">
 
     
-        <mat-card-content>
+        <mat-card-content lg>
     
     
             <div style="text-align: center;">
-                
             <mat-card-title>Login</mat-card-title>
             </div>
+
             <form [formGroup]="loginForm">
-                <mat-form-field appearance="fill">
+                <mat-form-field class="userType" appearance="fill" >
                     <mat-label>Username</mat-label>
                     <input matInput placeholder="username" formControlName="userName" required>
                     <mat-error *ngIf="loginForm.controls.userName.invalid">You must enter a value</mat-error>
@@ -18,7 +18,7 @@
           
                 <br>
           
-                <mat-form-field appearance="fill">
+                <mat-form-field class="userType" appearance="fill" >
                     <mat-label>Password</mat-label>
                     <input matInput placeholder="password" formControlName="password" type="password" required>
                     <mat-error *ngIf="loginForm.controls.password.invalid">You must enter a value</mat-error>
@@ -26,7 +26,7 @@
                 
                 <br>
           
-                <button mat-flat-button color="primary" type="submit" (click)="loginSubmit()">login</button>
+                <button mat-flat-button color="primary" type="submit" (click)="loginSubmit()"> login</button>
                 <mat-error *ngIf="!isLoggedIn">Wrong Username and password</mat-error>
               </form>
     
@@ -36,5 +36,6 @@
     
 
 </div>
+
 
 

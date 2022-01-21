@@ -10,8 +10,6 @@ import { LoginService } from '../login.service';
 })
 export class LoginComponent implements OnInit {
 
-  username = 'input'
-  password = 'input'
   isLoggedIn: boolean = true;
 
   loginForm = new FormGroup({
@@ -27,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   loginSubmit() {
     var userInfo = this.loginForm.value;
-    this.loginservice.login(userInfo.userName == this.username, userInfo.password == this.password).then(
+    this.loginservice.login(userInfo.userName, userInfo.password).then(
       res => {
         if (res.loginSuccessful) {
           this.isLoggedIn = true;
